@@ -1,0 +1,122 @@
+---
+import '@/styles/globals.css';
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Navbar } from '@/components/Navbar';
+---
+
+<Layout title="VoiceResume - Transform Your Resume into Audio">
+  <Navbar client:load />
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-20">
+      <div class="container px-4 mx-auto">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+            Transform Your Resume Into A Professional Audio Presentation
+          </h1>
+          <p class="text-lg md:text-xl text-muted-foreground mb-8">
+            Upload your resume and let AI create a natural-sounding audio version that highlights your achievements with perfect pacing and emphasis.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/register">
+              <Button size="lg" className="w-full sm:w-auto">Get Started</Button>
+            </a>
+            <a href="#how-it-works">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                How It Works
+              </Button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 md:py-20 bg-muted/50">
+      <div class="container px-4 mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Key Features</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-6 rounded-lg bg-card">
+            <div class="w-12 h-12 mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Easy Upload</h3>
+            <p class="text-muted-foreground">Upload your resume in PDF or Word format with a simple drag and drop interface.</p>
+          </div>
+          <div class="p-6 rounded-lg bg-card">
+            <div class="w-12 h-12 mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">AI Voice Generation</h3>
+            <p class="text-muted-foreground">Natural-sounding voice with proper emphasis and pacing for professional presentation.</p>
+          </div>
+          <div class="p-6 rounded-lg bg-card">
+            <div class="w-12 h-12 mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Easy Download</h3>
+            <p class="text-muted-foreground">Download your audio resume instantly and share it with potential employers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-12 md:py-20">
+      <div class="container px-4 mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
+        <div class="max-w-3xl mx-auto">
+          <div class="space-y-8">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0">
+                1
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Upload Your Resume</h3>
+                <p class="text-muted-foreground">Simply upload your resume in PDF or Word format through our user-friendly interface.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0">
+                2
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">AI Processing</h3>
+                <p class="text-muted-foreground">Our AI analyzes your resume and converts it into natural-sounding speech with appropriate pauses and emphasis.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0">
+                3
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Download & Share</h3>
+                <p class="text-muted-foreground">Download your audio resume and share it with potential employers or use it for your personal branding.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 md:py-20 bg-muted/50">
+      <div class="container px-4 mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Resume?</h2>
+        <p class="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          Join thousands of professionals who are standing out with their audio resumes.
+        </p>
+        <a href="/register">
+          <Button size="lg">Get Started Now</Button>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Dashboard } from '@/components/dashboard/Dashboard';
+---
+
+<Layout title="Dashboard - VoiceResume">
+  <main class="min-h-screen pt-20 px-4">
+    <Dashboard client:react />
+  </main>
+</Layout>
