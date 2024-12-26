@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useDropzone } from 'react-dropzone';
 import { Upload, FileText, Download, Play, Pause } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/lib/supabase';
@@ -23,7 +22,7 @@ export function Dashboard() {
       const { data, error } = await supabase
         .from('resumes')
         .select('*')
-        .eq('user_id', user.id)
+        // .eq('user_id', user.id)
         .order('created_at', { ascending: false });
 
       if (error) throw error;

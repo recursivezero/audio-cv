@@ -6,10 +6,18 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    ssr: {
+      noExternal: [
+        'react-dropzone'
+      ],
+    }
+  },
   integrations: [
     react({experimentalReactChildren: true}),
+    
     tailwind({
-      applyBaseStyles: false,
+      applyBaseStyles: true,
     }),
   ],
 });

@@ -21,7 +21,7 @@ export function ResumeList({ resumes, isLoading, onDelete }: ResumeListProps) {
   const handleDelete = async (id: string) => {
     try {
       const { error } = await supabase
-        .from('resumes')
+        .from('resume')
         .delete()
         .eq('id', id);
 

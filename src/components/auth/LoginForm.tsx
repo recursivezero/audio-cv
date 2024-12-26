@@ -22,7 +22,7 @@ export function LoginForm() {
   const onSubmit = async (data: z.infer<typeof loginSchema>) => {
     try {
       setIsLoading(true);
-      const { error } = await supabase.auth.signInWithPassword(data);
+      const { error } = await supabase.auth.signInWithPassword(data as any);
       if (error) throw error;
       window.location.href = '/dashboard';
     } catch (error) {

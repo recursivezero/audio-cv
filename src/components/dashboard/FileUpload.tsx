@@ -24,14 +24,14 @@ export function FileUpload({ onUploadComplete }: FileUploadProps) {
       const filePath = `${user.id}/${fileName}`;
 
       const { error: uploadError } = await supabase.storage
-        .from('resumes')
+        .from('resume')
         .upload(filePath, file);
 
       if (uploadError) throw uploadError;
 
       // Create resume record
       const { error: dbError } = await supabase
-        .from('resumes')
+        .from('resume')
         .insert({
           user_id: user.id,
           title: file.name,

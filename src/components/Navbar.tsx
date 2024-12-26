@@ -27,8 +27,8 @@ export function Navbar() {
             <a href="/dashboard" className="text-foreground/60 hover:text-foreground">
               Dashboard
             </a>
-            <a href="/upload" className="text-foreground/60 hover:text-foreground">
-              Upload
+            <a href="/login" className="text-foreground/60 hover:text-foreground">
+              Login
             </a>
             <Button
               variant="ghost"
@@ -63,10 +63,10 @@ export function Navbar() {
               Dashboard
             </a>
             <a
-              href="/upload"
+              href="/login"
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground/60 hover:text-foreground"
             >
-              Upload
+              Login
             </a>
             <Button
               variant="ghost"
